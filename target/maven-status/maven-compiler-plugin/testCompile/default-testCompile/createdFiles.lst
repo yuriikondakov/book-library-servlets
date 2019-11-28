@@ -1,0 +1,4 @@
+service\impl\UserServiceImplTest.class
+service\validator\UserInputValidatorEmailTest.class
+service\PasswordEncoderTest.class
+service\validator\UserInputValidatorPasswordTest.class

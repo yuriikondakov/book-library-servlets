@@ -1,0 +1,32 @@
+2019-10-28 16:31:07 ERROR AbstractCrudDaoImpl:42 - Can't find by email
+2019-10-28 16:34:37 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-28 16:34:54 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-28 16:38:49 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-28 16:40:06 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-28 16:44:17 WARN  UserServiceImpl:26 - User with email is already exist.
+2019-10-28 16:45:08 WARN  UserServiceImpl:26 - User with email is already exist.
+2019-10-28 18:05:07 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-28 20:59:07 ERROR ConnectorDB:29 - DataBase connection error
+2019-10-28 20:59:36 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-28 21:41:25 WARN  UserServiceImpl:25 - User with email is already exist.
+2019-10-30 16:31:04 ERROR ConnectorDB:29 - DataBase connection error
+2019-11-01 18:32:53 WARN  UserServiceImpl:36 - UserEntity with email is already exist.
+2019-11-01 18:33:19 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:35:44 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:37:58 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:42:29 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:43:10 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:44:08 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:50:28 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:53:34 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:56:03 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 19:56:36 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 20:03:32 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 20:04:20 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 20:09:31 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 20:13:44 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 20:46:40 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-01 20:49:22 ERROR ConnectorDB:34 - DataBase connection error
+2019-11-08 21:18:49 INFO  UserServiceImpl:40 - UserEntity saved.
+2019-11-15 18:37:08 DEBUG UserServiceImpl:39 - start register
+2019-11-15 18:37:08 DEBUG UserServiceImpl:42 - UserEntity saved.
