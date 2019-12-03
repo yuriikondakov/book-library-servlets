@@ -7,32 +7,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ConnectionPool {
-    private static final Logger LOGGER = Logger.getLogger(ConnectionPool.class);
+public class DBCPDataSource {
+    private static final Logger LOGGER = Logger.getLogger(DBCPDataSource.class);
 
-    private BasicDataSource dataSource;
+    private static final BasicDataSource dataSource = new BasicDataSource();
 
-    public ConnectionPool() {
-    }
-
-    public Connection getConnection() {
-        Connection connection;
-        try {
-            initDataSource("mysql");
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = dataSource.getConnection();
-        } catch (SQLException e) {
-            LOGGER.warn("Check database is running and configs are correct");
-            throw new DataBaseRuntimeException("Fail Connection", e);
-        }
-        catch (ClassNotFoundException e) {
-            LOGGER.warn("Please include JDBC MySQL jar in classpath");
-            throw new DataBaseRuntimeException("Fail Connection", e);
-        }
-        return connection;
-    }
-
-    private void initDataSource(String dbProperties) {
+    private DBCPDataSource (String dbProperties) {
         if (dataSource == null) {
             dataSource = new BasicDataSource();
             ResourceBundle resource = ResourceBundle.getBundle(dbProperties);
@@ -44,4 +24,14 @@ public class ConnectionPool {
             dataSource.setMaxOpenPreparedStatements(Integer.parseInt(resource.getString("MaxOpenPreparedStatements")));
         }
     }
+
+    public Connection getConnection() {
+        try {
+            return dataSource.getConnection();
+        } catch (SQLException e) {
+            LOGGER.error("Connection to database was not established", e);
+            throw new DataBaseRuntimeException("Connection to database not established", e);
+        }
+    }
+
 }
