@@ -15,21 +15,23 @@ import java.util.Optional;
 
 public class BookDaoImpl extends AbstractCrudDaoImpl<BookEntity> implements BookDao {
     private static final Logger LOGGER = Logger.getLogger(BookDaoImpl.class);
+
     private static final String FIND_ALL_QUERY = "SELECT * from book";
     private static final String FIND_BY_ID_QUERY = "SELECT * from book WHERE id = ?";
-    private static final String FIND_BOOKS_BY_USER_ID_QUERY = "SELECT book.id, book.name, book.description, book.shelfId," +
+    private static final String FIND_BOOKS_BY_USER_ID_QUERY = "SELECT book.id, book.name, book.description, book.shelf_id," +
             " book_tracking.issue_date, book_tracking.return_date from book " +
-            "JOIN book_tracking ON book_tracking.bookId = book.id " +
-            "WHERE book_tracking.userId = ? and book_tracking.return_date IS NULL ";
+            "JOIN book_tracking ON book_tracking.book_id = book.id " +
+            "WHERE book_tracking.user_id = ? and book_tracking.return_date IS NULL ";
     private static final String RETURN_BOOK_QUERY = "UPDATE book_tracking SET return_date=? " +
-            "WHERE book_tracking.userId = ? and  book_tracking.bookId=?";
+            "WHERE book_tracking.user_id = ? and  book_tracking.book_id=?";
     private static final String FIND_RAWS_COUNT_QUERY = "SELECT COUNT(id) from book";
     private static final String FIND_BOOKS_PER_PAGE = "SELECT * FROM book LIMIT ?, ?";
     private static final String FIND_BOOKS_WITH_SEARCH_PER_PAGE = "SELECT * FROM book WHERE book.name LIKE ? LIMIT ?, ?";
-    private static final String INSERT_BOOK_TRACKING_QUERY = "INSERT INTO book_tracking(userId, bookId, issue_date) " +
+    private static final String INSERT_BOOK_TRACKING_QUERY = "INSERT INTO book_tracking(user_id, book_id, issue_date) " +
             "VALUES (?,?,?)";
     private static final String INSERT_BOOK_QUERY = "INSERT INTO book (name, description) VALUES (?,?)";
-    private static final String INSERT_BOOK_AUTHORS_QUERY = "INSERT INTO book_authors (bookId, authorId) VALUES (?,?)";
+    private static final String INSERT_BOOK_AUTHORS_QUERY = "INSERT INTO book_author " +
+            "(book_author.book_id, book_author.author_id) VALUES (?,?)";
 
     private final AuthorDao authorDao;
 
@@ -94,7 +96,7 @@ public class BookDaoImpl extends AbstractCrudDaoImpl<BookEntity> implements Book
     }
 
     @Override
-    public BookEntity saveBook(BookEntity bookEntity) {
+    public BookEntity save(BookEntity bookEntity) {
         LOGGER.info("saving book");
         try (Connection connection = connectionPool.getConnection();
              PreparedStatement preparedStatement = connection
@@ -186,7 +188,7 @@ public class BookDaoImpl extends AbstractCrudDaoImpl<BookEntity> implements Book
                 .withName(resultSet.getString("name"))
                 .withAuthors(authorEntityList)
                 .withDescription(resultSet.getString("description"))
-                .withShelfId(resultSet.getInt("shelfId"))
+                .withShelfId(resultSet.getInt("shelf_id"))
                 .build();
     }
 
@@ -198,14 +200,9 @@ public class BookDaoImpl extends AbstractCrudDaoImpl<BookEntity> implements Book
                 .withName(resultSet.getString("name"))
                 .withAuthors(authorEntityList)
                 .withDescription(resultSet.getString("description"))
-                .withShelfId(resultSet.getInt("shelfId"))
+                .withShelfId(resultSet.getInt("shelf_id"))
                 .withIssueDate(resultSet.getDate("issue_date").toLocalDate())
                 .build();
-    }
-
-    @Override
-    public BookEntity save(BookEntity entity) {
-        return null;
     }
 
     @Override
@@ -216,10 +213,6 @@ public class BookDaoImpl extends AbstractCrudDaoImpl<BookEntity> implements Book
     @Override
     public List<BookEntity> findAll() {
         return findAll(FIND_ALL_QUERY);
-    }
-
-    @Override
-    public void update(BookEntity entity) {
     }
 
 }

@@ -1,7 +1,8 @@
 package dao.impl;
 
-import dao.CrudDao;
+import context.ApplicationContextInjector;
 import dao.ConnectionPool;
+import dao.CrudDao;
 import dao.DataBaseRuntimeException;
 import org.apache.log4j.Logger;
 
@@ -15,7 +16,7 @@ import java.util.Optional;
 
 abstract class AbstractCrudDaoImpl<E> implements CrudDao<E, Integer> {
     private static final Logger LOGGER = Logger.getLogger(AbstractCrudDaoImpl.class);
-    final ConnectionPool connectionPool = new ConnectionPool();
+    final ConnectionPool connectionPool = ApplicationContextInjector.getInstance().getConnectionPool();
 
     protected Optional<E> findById(Integer id, String query) {
         try (Connection connection = connectionPool.getConnection();
@@ -33,9 +34,10 @@ abstract class AbstractCrudDaoImpl<E> implements CrudDao<E, Integer> {
     List<E> findAll(String query) {
         try (Connection connection = connectionPool.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            LOGGER.debug("start find all");
             return getEntities(preparedStatement);
         } catch (SQLException e) {
-            LOGGER.error("Can't find all");
+            LOGGER.error("Can't find all" + query);
             throw new DataBaseRuntimeException(e);
         }
     }
@@ -46,7 +48,7 @@ abstract class AbstractCrudDaoImpl<E> implements CrudDao<E, Integer> {
             preparedStatement.setInt(1, id);
             return getEntities(preparedStatement);
         } catch (SQLException e) {
-            LOGGER.error("Can't find Items by id");
+            LOGGER.error("Can't find Items by id: " + query);
             throw new DataBaseRuntimeException(e);
         }
     }
@@ -66,6 +68,7 @@ abstract class AbstractCrudDaoImpl<E> implements CrudDao<E, Integer> {
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, param);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
+
                 return resultSet.next() ? Optional.ofNullable(mapResultSetToEntity(resultSet)) : Optional.empty();
             }
         } catch (SQLException e) {

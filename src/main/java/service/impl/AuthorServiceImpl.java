@@ -1,16 +1,13 @@
 package service.impl;
 
 import dao.AuthorDao;
+import dao.entity.AuthorEntity;
 import domain.Author;
-import domain.Book;
 import org.apache.log4j.Logger;
 import service.AuthorService;
-import service.BookService;
 import service.mapper.AuthorMapper;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class AuthorServiceImpl implements AuthorService {
@@ -23,7 +20,6 @@ public class AuthorServiceImpl implements AuthorService {
         this.authorMapper = authorMapper;
     }
 
-
     @Override
     public Author findById(Integer id) {
         return authorDao.findById(id).map(authorMapper::mapAuthorEntityToAuthor).orElse(null);
@@ -32,5 +28,11 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public List<Author> getAllAuthors() {
         return authorDao.findAll().stream().map(authorMapper::mapAuthorEntityToAuthor).collect(Collectors.toList());
+    }
+
+    @Override
+    public Author save(Author author) {
+        AuthorEntity authorEntity = authorMapper.mapAuthorToAuthorEntity(author);
+        return authorMapper.mapAuthorEntityToAuthor(authorDao.save(authorEntity));
     }
 }

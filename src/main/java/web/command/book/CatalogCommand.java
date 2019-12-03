@@ -33,7 +33,7 @@ public class CatalogCommand implements Command {
         List<Book> books;
         int rows;
         String searchField = request.getParameter("searchField");
-        if (searchField==null) {
+        if (searchField == null) {
             LOGGER.debug("searchField is empty");
             books = bookService.getBooksPerPage(currentPage, recordsPerPage);
             rows = bookService.getNumberOfRows();
@@ -47,9 +47,7 @@ public class CatalogCommand implements Command {
 
         request.setAttribute("bookList", books);
 
-
         int nOfPages = rows / recordsPerPage;
-
         if (rows % recordsPerPage > 0) {
             nOfPages++;
         }

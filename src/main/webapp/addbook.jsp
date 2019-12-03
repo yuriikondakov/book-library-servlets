@@ -6,7 +6,6 @@
             <div class="card-body">
                 <form action="front-controller" method="post">
                     <input type="hidden" name="command" value="add_book"/>
-
                     <%--<input type="hidden" name="bookId" value="${requestScope.book.id}"/>--%>
                     <c:if test="${not empty addBookSuccessful}">
                         <div class="alert alert-success" role="alert">

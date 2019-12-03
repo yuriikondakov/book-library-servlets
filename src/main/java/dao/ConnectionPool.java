@@ -7,22 +7,24 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class DBCPDataSource {
-    private static final Logger LOGGER = Logger.getLogger(DBCPDataSource.class);
+public class ConnectionPool {
+    private static final Logger LOGGER = Logger.getLogger(ConnectionPool.class);
 
     private static final BasicDataSource dataSource = new BasicDataSource();
 
-    private DBCPDataSource (String dbProperties) {
-        if (dataSource == null) {
-            dataSource = new BasicDataSource();
-            ResourceBundle resource = ResourceBundle.getBundle(dbProperties);
-            dataSource.setUrl(resource.getString("url"));
-            dataSource.setUsername(resource.getString("user"));
-            dataSource.setPassword(resource.getString("password"));
-            dataSource.setMinIdle(Integer.parseInt(resource.getString("MinIdle")));
-            dataSource.setMaxIdle(Integer.parseInt(resource.getString("MaxIdle")));
-            dataSource.setMaxOpenPreparedStatements(Integer.parseInt(resource.getString("MaxOpenPreparedStatements")));
-        }
+    public ConnectionPool(String dbProperties) {
+        ResourceBundle resource = ResourceBundle.getBundle(dbProperties);
+        dataSource.setDriverClassName(resource.getString("driver"));
+        dataSource.setUrl(resource.getString("url"));
+        dataSource.setUsername(resource.getString("user"));
+        dataSource.setPassword(resource.getString("password"));
+        dataSource.setMinIdle(getParameter(resource, "MinIdle"));
+        dataSource.setMaxIdle(getParameter(resource, "MaxIdle"));
+        dataSource.setMaxOpenPreparedStatements(getParameter(resource, "MaxOpenPreparedStatements"));
+    }
+
+    private int getParameter(ResourceBundle resource, String param) {
+        return Integer.parseInt(resource.getString(param));
     }
 
     public Connection getConnection() {

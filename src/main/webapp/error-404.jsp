@@ -1,3 +1,8 @@
 <%@ include file="header.jsp" %>
-404
+<div class="container">
+    <div class="row mt-5">
+        <h3>This page is not found</h3>
+    </div>
+</div>
+
 <%@ include file="footer.jsp" %>

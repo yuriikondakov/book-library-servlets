@@ -11,7 +11,7 @@
                         </div>
                     </c:if>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">testuser@gmail.com</label>
+                        <label for="exampleInputEmail1">user@mail.com</label>
                         <input type="email" class="form-control" name="email" id="exampleInputEmail1"
                                aria-describedby="emailHelp" placeholder="Enter email" value="${email}" required
                                autofocus>
@@ -26,7 +26,7 @@
                     </div>
                     <c:if test="${not empty loginWarningMessage}">
                         <div class="alert alert-danger" role="alert">
-                                ${loginWarningMessage}
+                                <fmt:message key="loginWarningMessage"/>
                         </div>
                     </c:if>
                     <button type="submit" class="btn btn-primary"><fmt:message key="SignIn"/></button>

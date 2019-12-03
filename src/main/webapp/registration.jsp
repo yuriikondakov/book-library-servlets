@@ -28,6 +28,10 @@
                     <input type="password" class="form-control" name="password2"
                            id="RepeatPassword" placeholder="<fmt:message key="Password"/>" required>
                 </div>
+                <div class="form-group">
+                    <input type="text" class="form-control bfh-phone"
+                           value="" name="phone" data-format="+38 (0dd) ddd-dddd">
+                </div>
                 <c:if test="${not empty registrationWarningMessage}">
                     <div class="alert alert-danger" role="alert">
                             ${registrationWarningMessage}
@@ -39,5 +43,7 @@
         <div class="col-3"></div>
     </div>
 </div>
+
+<script src="js/bootstrap-formhelpers-phone.js" type="text/javascript"></script>
 <%@ include file="footer.jsp" %>
 

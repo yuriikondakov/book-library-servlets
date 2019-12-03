@@ -19,7 +19,7 @@ public class UserDaoImpl extends AbstractCrudDaoImpl<UserEntity> implements User
     private static final String FIND_BY_EMAIL_QUERY = "SELECT * from user WHERE email = ?";
     private static final String FIND_BY_ID_QUERY = "SELECT * from user WHERE id = ?";
     private static final String FIND_ALL_QUERY = "SELECT * from user";
-    private static final String SQL_INSERT_USER = "INSERT INTO user(name, email, password, phone, role) VALUES(?,?,?,?,?)";
+    private static final String SQL_INSERT_USER = "INSERT INTO user(name, email, password, phone_number, role) VALUES(?,?,?,?,?)";
 
     @Override
     public Optional<UserEntity> findByEmail(String email) {
@@ -55,17 +55,14 @@ public class UserDaoImpl extends AbstractCrudDaoImpl<UserEntity> implements User
     }
 
     @Override
-    public void update(UserEntity entity) {
-    }
-
-    @Override
     public UserEntity mapResultSetToEntity(ResultSet resultSet) throws SQLException {
+      //  System.out.println("mapUser" + resultSet.toString());
         return UserEntity.builder()
                 .withId(resultSet.getInt("id"))
                 .withName(resultSet.getString("name"))
                 .withEmail(resultSet.getString("email"))
                 .withPassword(resultSet.getString("password"))
-                .withPhoneNumber(resultSet.getString("phone"))
+                .withPhoneNumber(resultSet.getString("phone_number"))
                 .withRole(Role.valueOf(resultSet.getString("role")))
                 .build();
     }

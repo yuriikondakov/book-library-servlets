@@ -15,6 +15,7 @@ public class LogoutCommand implements Command {
         session.invalidate();
         HttpSession newSession=request.getSession();
         newSession.setAttribute("lang", lang);
+
         return "/front-controller?command=library";
     }
 }

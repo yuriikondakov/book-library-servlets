@@ -12,5 +12,4 @@ public interface CrudDao<E, ID extends Serializable> {
 
     List<E> findAll();
 
-    void update(E entity);
 }

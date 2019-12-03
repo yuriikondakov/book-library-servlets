@@ -62,9 +62,6 @@
                                     key="Logout"/></a>
                             <c:choose>
                                 <c:when test="${user.role eq 'USER'}">
-                                   <%-- <a class="dropdown-item" href="front-controller?command=user_account">
-                                        <fmt:message key="user_account"/>
-                                    </a>--%>
                                     <a class="dropdown-item" href="front-controller?command=my_books">
                                         <fmt:message key="my_books"/>
                                     </a>
@@ -72,6 +69,9 @@
                                 <c:when test="${user.role eq 'ADMIN'}">
                                     <a class="dropdown-item" href="front-controller?command=add_book">
                                         <fmt:message key="AddBook"/>
+                                    </a>
+                                    <a class="dropdown-item" href="front-controller?command=add_author">
+                                        <fmt:message key="AddAuthor"/>
                                     </a>
                                 </c:when>
                             </c:choose>

@@ -130,7 +130,7 @@ public class BookServiceImplTest {
     public void addBook() {
         when(bookMapper.mapBookEntityToBook(any(BookEntity.class))).thenReturn(BOOK);
         when(bookMapper.mapBookToBookEntity(any(Book.class))).thenReturn(BOOK_ENTITY);
-        when(bookDao.saveBook(any(BookEntity.class))).thenReturn(BOOK_ENTITY);
+        when(bookDao.save(any(BookEntity.class))).thenReturn(BOOK_ENTITY);
         doNothing().when(bookDao).saveBookAuthors(anyInt(), anyInt());
 
         Book expected = bookService.addBook(BOOK);

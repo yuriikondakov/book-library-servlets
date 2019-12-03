@@ -33,6 +33,7 @@ public class RegisterCommand implements Command {
 
         final String password1 =  request.getParameter("password1");
         final String password2 =  request.getParameter("password2");
+        final String phone =  request.getParameter("phone");
         LOGGER.debug("name-email-pass1-pass2" + name + ":" + email + ":" + password1 + ":" + password2);
 
         if (!userService.isValidEmail(email)) {
@@ -63,6 +64,7 @@ public class RegisterCommand implements Command {
                 .withEmail(email)
                 .withName(name)
                 .withPassword(password1)
+                .withPhoneNumber(phone)
                 .withRole(Role.USER)
                 .build();
 

@@ -10,4 +10,6 @@ public interface AuthorService {
     Author findById(Integer id);
 
     List<Author> getAllAuthors();
+
+    Author save(Author author);
 }

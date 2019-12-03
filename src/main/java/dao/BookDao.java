@@ -1,12 +1,9 @@
 package dao;
 
 import dao.entity.BookEntity;
-import domain.Book;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 public interface BookDao extends CrudDao<BookEntity, Integer> {
 
@@ -22,7 +19,7 @@ public interface BookDao extends CrudDao<BookEntity, Integer> {
 
     List<BookEntity> findBooksByStringParamPerPage(int currentPage, int recordsPerPage, String searchField);
 
-    BookEntity saveBook(BookEntity bookEntity);
+    BookEntity save(BookEntity bookEntity);
 
     void saveBookAuthors(Integer bookId, Integer authorId);
 

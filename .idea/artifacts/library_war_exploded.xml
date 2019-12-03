@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="library:war exploded">
-    <output-path>$PROJECT_DIR$/target/library-1.1</output-path>
+    <output-path>$PROJECT_DIR$/target/library-0.1</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>library</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -10,7 +17,6 @@
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.15" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
-          <element id="library" level="project" name="Maven: org.jasypt:jasypt:1.9.3" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-dbcp2:2.4.0" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.5.0" />
@@ -19,7 +25,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/library-1.1/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/library-0.1/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="library/web/Web" />
     </root>

@@ -10,7 +10,6 @@ import web.command.Command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -40,7 +39,7 @@ public class AddBookCommand implements Command {
             request.setAttribute("name", name);
             request.setAttribute("description", description);
 
-            final List<Author> authors = (List<Author>) Collections.singletonList(authorService.findById(authorId));
+            final List<Author> authors = Collections.singletonList(authorService.findById(authorId));
 
             final Book book = Book.builder()
                     .withName(name)

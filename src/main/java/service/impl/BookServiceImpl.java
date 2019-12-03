@@ -5,11 +5,11 @@ import dao.entity.BookEntity;
 import domain.Book;
 import org.apache.log4j.Logger;
 import service.BookService;
+import service.exception.BookNotFoundException;
 import service.mapper.BookMapper;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class BookServiceImpl implements BookService {
@@ -24,7 +24,9 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book findById(Integer id) {
-        return bookDao.findById(id).map(bookMapper::mapBookEntityToBook).orElse(null);
+        return bookDao.findById(id)
+                .map(bookMapper::mapBookEntityToBook)
+                .orElseThrow(() -> new BookNotFoundException("Book not found by id"));
     }
 
     @Override
@@ -67,8 +69,8 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book addBook(Book book) {
-        BookEntity savedBookEntity = bookDao.saveBook(bookMapper.mapBookToBookEntity(book));
-        bookDao.saveBookAuthors(savedBookEntity.getId(), book.getAuthors().stream().findFirst().get().getId());
+        BookEntity savedBookEntity = bookDao.save(bookMapper.mapBookToBookEntity(book));
+        bookDao.saveBookAuthors(savedBookEntity.getId(), book.getAuthors().get(0).getId());
         return bookMapper.mapBookEntityToBook(savedBookEntity);
     }
 }

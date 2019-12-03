@@ -34,7 +34,6 @@ public class FrontController extends HttpServlet {
         Enumeration<String> params = req.getParameterNames();
         while(params.hasMoreElements()){
             String paramName = params.nextElement();
-            System.out.println("Parameter Name - "+paramName+", Value - "+req.getParameter(paramName));
         }
         final String page = commandNameToCommand.getOrDefault(commandName, defaultCommand).execute(req, resp, POST);
         LOGGER.info("doPost - page:" + page);

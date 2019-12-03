@@ -6,7 +6,6 @@ import domain.User;
 import org.apache.log4j.Logger;
 import service.PasswordEncoder;
 import service.UserService;
-import service.UserServiceRuntimeException;
 import service.mapper.UserMapper;
 import service.validator.UserInputValidator;
 
@@ -47,14 +46,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(String email, String password) {
         if (isValidEmail(email) && isValidPassword(password)) {
-            User user = findAll().stream().filter(u -> u.getEmail().equals(email)).findAny().orElse(null);
-            if (user == null) {
-                LOGGER.debug("user login or password not ok - user=null");
-                return null;
-            }
-            if (passwordEncoder.checkPassword(password, user.getPassword())) {
-                LOGGER.debug("user login and password ok");
-                return user;
+            Optional<User> optionalUser = userDao.findByEmail(email).map(userMapper::mapUserEntityToUser);
+            System.out.println(optionalUser);
+            if (optionalUser.isPresent()) {
+                User user = optionalUser.get();
+                if (passwordEncoder.checkPassword(password, user.getPassword())) {
+                    LOGGER.debug("user login and password ok");
+                    return user;
+                }
             }
         }
         return null;

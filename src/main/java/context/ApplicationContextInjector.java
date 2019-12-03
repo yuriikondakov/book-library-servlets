@@ -2,6 +2,7 @@ package context;
 
 import dao.AuthorDao;
 import dao.BookDao;
+import dao.ConnectionPool;
 import dao.UserDao;
 import dao.impl.AuthorDaoImpl;
 import dao.impl.BookDaoImpl;
@@ -26,6 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ApplicationContextInjector {
+    private final static ConnectionPool CONNECTION_POOL = new ConnectionPool("mysql");
     private final static AuthorDao AUTHOR_DAO = new AuthorDaoImpl();
     private final static BookDao BOOK_DAO = new BookDaoImpl(AUTHOR_DAO);
     private static final UserDao USER_DAO = new UserDaoImpl();
@@ -51,6 +53,7 @@ public class ApplicationContextInjector {
     private static final Command RETURN_BOOK_COMMAND = new ReturnBookCommand(BOOK_SERVICE);
     private static final Command USER_BOOKS_COMMAND = new UserBooksCommand(BOOK_SERVICE);
     private static final Command ADD_BOOK_COMMAND = new AddBookCommand(BOOK_SERVICE,  AUTHOR_SERVICE);
+    private static final Command ADD_AUTHOR_COMMAND = new AddAuthorCommand(AUTHOR_SERVICE);
     private static final Map<String, Command> USER_COMMAND_NAME_TO_COMMAND = initUserCommand();
 
     private static Map<String, Command> initUserCommand() {
@@ -65,6 +68,7 @@ public class ApplicationContextInjector {
         userCommandNameToCommand.put("returnBook", RETURN_BOOK_COMMAND);
         userCommandNameToCommand.put("add_book", ADD_BOOK_COMMAND);
         userCommandNameToCommand.put("locale", LOCALE_COMMAND);
+        userCommandNameToCommand.put("add_author", ADD_AUTHOR_COMMAND);
 
         return Collections.unmodifiableMap(userCommandNameToCommand);
     }
@@ -72,7 +76,6 @@ public class ApplicationContextInjector {
     private static ApplicationContextInjector instance;
 
     private ApplicationContextInjector() {
-        // private constructor 
     }
 
     public static ApplicationContextInjector getInstance() {
@@ -86,39 +89,10 @@ public class ApplicationContextInjector {
         return instance;
     }
 
-    public AuthorDao getAuthorDao() {
-        return AUTHOR_DAO;
-    }
-
-    public BookDao getBookDao() {
-        return BOOK_DAO;
-    }
-
-    public UserDao getUserDao() {
-        return USER_DAO;
-    }
-
-    public AuthorMapper getAuthorMapper() {
-        return AUTHOR_MAPPER;
-    }
-
-    public BookMapper getBookMapper() {
-        return BOOK_MAPPER;
-    }
-
-    public BookService getBookService() {
-        return BOOK_SERVICE;
-    }
-
-    public UserService getUserService() {
-        return USER_SERVICE;
-    }
-
     public Map<String, Command> getUserCommandNameToCommand() {
         return USER_COMMAND_NAME_TO_COMMAND;
     }
-
-    public PasswordEncoder getPasswordEncoder() {
-        return PASSWORD_ENCODER;
+    public ConnectionPool getConnectionPool() {
+        return CONNECTION_POOL;
     }
 }
