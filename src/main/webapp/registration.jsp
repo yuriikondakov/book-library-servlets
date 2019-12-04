@@ -11,11 +11,9 @@
                            id="InputName" placeholder="<fmt:message key="UserName"/>" required autofocus>
                 </div>
                 <div class="form-group">
-                    <label for="InputEmail1">Email address</label>
+                    <label for="InputEmail1"><fmt:message key="Email"/></label>
                     <input type="email" class="form-control" name="email" id="InputEmail1"
                            aria-describedby="emailHelp1" placeholder="Enter email" value="${email}" required>
-                    <small id="emailHelp1" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
                 </div>
                 <div class="form-group">
                     <label for="InputPassword1"><fmt:message key="Password"/></label>
@@ -30,7 +28,7 @@
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control bfh-phone"
-                           value="" name="phone" data-format="+38 (0dd) ddd-dddd">
+                           value="" name="phone" data-format="+38 (0dd) ddd-dddd" required>
                 </div>
                 <c:if test="${not empty registrationWarningMessage}">
                     <div class="alert alert-danger" role="alert">

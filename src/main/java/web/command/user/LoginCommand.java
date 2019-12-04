@@ -39,7 +39,10 @@ public class LoginCommand implements Command {
             request.getSession().setAttribute("user", user);
             request.getSession().setAttribute("user_role", user.getRole());
             request.getSession().setAttribute("userId", user.getId());
+
+            return "/front-controller?command=catalog";
         }
-        return "/front-controller?command=catalog";
+        request.setAttribute("loginWarningMessage", "Login or Password incorrect");
+        return "login.jsp";
     }
 }

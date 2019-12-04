@@ -9,227 +9,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ebf620e-969e-4a07-8881-94301b84e140" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/exception/BookNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/web/command/book/AddAuthorCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/add_author.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-formhelpers-phone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/library_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/library_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/16df9bfd-ce51-462f-a0b7-6764aa08e4e3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/16df9bfd-ce51-462f-a0b7-6764aa08e4e3.xml" afterDir="false" />
+    <list default="true" id="4ebf620e-969e-4a07-8881-94301b84e140" name="Default" comment="error handler, footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/context/ApplicationContextInjector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/context/ApplicationContextInjector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CrudDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CrudDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DataBaseRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DataBaseRuntimeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/entity/AuthorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/entity/AuthorEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/AbstractCrudDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/AbstractCrudDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/AuthorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/AuthorDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AuthorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exception/UserServiceRuntimeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/AuthorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/AuthorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/mapper/AuthorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/mapper/AuthorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/.idea/web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/command/book/AddBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/command/book/AddBookCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/command/book/CatalogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/command/book/CatalogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/web/command/user/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/command/user/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/command/user/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/command/user/LogoutCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/command/user/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/command/user/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controller/ErrorHandlerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controller/ErrorHandlerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_uk.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_uk.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addbook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/error-404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/error-404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/impl/BookServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/impl/BookServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/context/ApplicationContextInjector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/AuthorDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/BookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/ConnectionPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/CrudDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/DataBaseRuntimeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/AuthorEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/BookEntity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/BookEntity$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/BookEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/UserEntity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/UserEntity$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/entity/UserEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/AbstractCrudDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/AuthorDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/BookDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Book$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Book$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/User$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/User$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_en.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_uk.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysql.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AuthorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PasswordEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/UserServiceRuntimeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/AuthorServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/BookServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/mapper/AuthorMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/mapper/BookMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/validator/UserInputValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/ActionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/book/AddBookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/book/BookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/book/CatalogCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/book/ReturnBookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/book/TakeBookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/user/LocaleCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/user/LoginCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/user/LogoutCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/user/RegisterCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/command/user/UserBooksCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/ErrorHandlerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/controller/FrontController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/filter/CharsetFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/filter/LocaleFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web/filter/SecurityFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/context/ApplicationContextInjector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/AuthorDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/BookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/ConnectionPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/CrudDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/DataBaseRuntimeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/AuthorEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/BookEntity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/BookEntity$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/BookEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/UserEntity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/UserEntity$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/entity/UserEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/impl/AbstractCrudDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/impl/AuthorDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/impl/BookDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/dao/impl/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/Book$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/Book$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/User$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/User$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/domain/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/messages_en.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/messages_uk.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/mysql.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/AuthorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/PasswordEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/UserServiceRuntimeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/impl/AuthorServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/impl/BookServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/mapper/AuthorMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/mapper/BookMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/service/validator/UserInputValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/ActionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/book/AddBookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/book/BookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/book/CatalogCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/book/ReturnBookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/book/TakeBookCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/user/LocaleCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/user/LoginCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/user/LogoutCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/user/RegisterCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/command/user/UserBooksCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/controller/ErrorHandlerServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/controller/FrontController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/filter/CharsetFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/filter/LocaleFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/classes/web/filter/SecurityFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/commons-dbcp2-2.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/commons-pool2-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/jasypt-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/mysql-connector-java-8.0.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/addbook.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/book.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/catalog.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/error-404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/js/jquery-3.4.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/not_admin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/not_allowed.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/registration.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/library-1.1/user_books.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.PasswordEncoderTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.impl.UserServiceImplTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.validator.UserInputValidatorEmailTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-service.validator.UserInputValidatorPasswordTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.PasswordEncoderTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.impl.UserServiceImplTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.validator.UserInputValidatorEmailTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.validator.UserInputValidatorPasswordTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/PasswordEncoderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/impl/BookServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/impl/UserServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/validator/UserInputValidatorEmailTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/validator/UserInputValidatorPasswordTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -346,7 +137,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574277327497" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../book-library-spring" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -631,7 +422,9 @@
       <workItem from="1575284743079" duration="26323000" />
       <workItem from="1575364078960" duration="317000" />
       <workItem from="1575364499297" duration="3478000" />
-      <workItem from="1575368844120" duration="2410000" />
+      <workItem from="1575368844120" duration="4852000" />
+      <workItem from="1575382697549" duration="6335000" />
+      <workItem from="1575405347870" duration="1327000" />
     </task>
     <servers />
   </component>
@@ -685,6 +478,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="error handler, footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="error handler, footer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

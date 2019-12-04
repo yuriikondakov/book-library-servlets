@@ -18,17 +18,21 @@ public class ErrorHandlerServlet extends HttpServlet {
 
         resp.setContentType("text/html; charset=utf-8");
         try (PrintWriter writer = resp.getWriter()) {
-            writer.write("<html><head><title>Error description</title></head><body>");
-            writer.write("<h2>Error description</h2>");
-            writer.write("<ul>");
-            Arrays.asList(
-                    ERROR_STATUS_CODE,
-                    ERROR_EXCEPTION_TYPE,
-                    ERROR_MESSAGE
-            )
-                    .forEach(e ->writer.write("<li>" + e + ":" + req.getAttribute(e) + " </li>")
-                    );
-            writer.write("</ul>");
+            writer.write("<html><head>" +
+                    "<title>Error description</title>" +
+                    "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/bootstrap.min.css\">" +
+                    "</head><body>");
+            writer.write("<div class=\"container\">\n" +
+                    "    <div class=\"row\">\n" +
+                    "        <div class=\"col-3\"></div>\n" +
+                    "        <div class=\"col-6 mt-5\">\n" +
+                    "            <div class=\"alert alert-danger\" role=\"alert\">\n" +
+                    "                Oops, something went wrong\n" +
+                    "            </div>\n" +
+                    "        </div>\n" +
+                    "        <div class=\"col-3\"></div>\n" +
+                    "    </div>\n" +
+                    "</div>");
             writer.write("</html></body>");
         }
     }

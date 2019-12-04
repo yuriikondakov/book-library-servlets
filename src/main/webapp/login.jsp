@@ -11,16 +11,13 @@
                         </div>
                     </c:if>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">user@mail.com</label>
+                        <label for="exampleInputEmail1"><fmt:message key="Email"/></label>
                         <input type="email" class="form-control" name="email" id="exampleInputEmail1"
-                               aria-describedby="emailHelp" placeholder="Enter email" value="${email}" required
+                               aria-describedby="emailHelp" placeholder="<fmt:message key="Email"/>" value="${email}" required
                                autofocus>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.
-                        </small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">userpass</label>
+                        <label for="exampleInputPassword1"><fmt:message key="Password"/></label>
                         <input type="password" class="form-control" name="password"
                                id="exampleInputPassword1" placeholder="<fmt:message key="Password"/>" required>
                     </div>

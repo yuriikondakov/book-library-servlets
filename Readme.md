@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Task](#setup)
+* [Task](#task)
 
 ## General info
 This project is a simple Java Application.
@@ -12,18 +12,19 @@ Project is created with:
 * Tomcat 9, JSP, JSTL
 	
 ## Task
-### Система Библиотека.
+#### Library System
+Create a catalog where you can search by:
+* To the author (one of the group).
+* The name of the book or its fragment.
+* One of the book’s keywords (book attribute).
 
-Создайте Каталог, по которому можно искать по:
- • Автору (одному из группы).
- • Названию книги или её фрагменте.
- • Одному из ключевых слов книги (атрибут книги).
+The catalog of books is filled by the Administrator, adding and modifying / deleting them.
 
-Каталог книг заполняет Администратор, добавляя и изменяя/удаляя их.
+Each book should have: an address (shelf space) or a reader.
 
-Каждая книга должна иметь: адрес (место на полке) или читателя.
+The reader to take the book is registered, leaving an e-mail and a phone number.
 
-Читатель чтобы взять книгу регистрируется, оставляя э-мейл и номер телефона.
-Книга может быть взята у Администратора в библиотеке на время не более месяца, только в случае
-если книга доступна в библиотеке.
-Администратор должен иметь страницу где отражаются взятые книги и читатели, которые пользуются книгой.
+The book can be taken from the Administrator in the library for a period of not more than a month, only if
+if the book is available in the library.
+ 
+The administrator must have a page where the books taken and the readers who use the book are displayed.
