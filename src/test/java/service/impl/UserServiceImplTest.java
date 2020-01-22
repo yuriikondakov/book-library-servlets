@@ -78,14 +78,14 @@ public class UserServiceImplTest {
         when(validator.isValidEmail(any(String.class))).thenReturn(true);
         when(validator.isValidPassword(any(String.class))).thenReturn(true);
         when(passwordEncoder.checkPassword(any(String.class),any(String.class))).thenReturn(true);
-        when(userDao.findAll()).thenReturn(Collections.singletonList(USER_ENTITY));
+        when(userDao.findByEmail(any(String.class))).thenReturn(Optional.ofNullable((USER_ENTITY)));
         when(userMapper.mapUserEntityToUser(any(UserEntity.class))).thenReturn(USER);
 
         User expected = userService.login("testuser@gmail.com" , "12345");
 
         assertThat(USER, is(expected));
         verify(validator).isValidPassword(any(String.class));
-        verify(userDao).findAll();
+        verify(userDao).findByEmail(any(String.class));
         verify(userMapper).mapUserEntityToUser(USER_ENTITY);
     }
 

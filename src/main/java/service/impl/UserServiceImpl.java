@@ -47,7 +47,6 @@ public class UserServiceImpl implements UserService {
     public User login(String email, String password) {
         if (isValidEmail(email) && isValidPassword(password)) {
             Optional<User> optionalUser = userDao.findByEmail(email).map(userMapper::mapUserEntityToUser);
-            System.out.println(optionalUser);
             if (optionalUser.isPresent()) {
                 User user = optionalUser.get();
                 if (passwordEncoder.checkPassword(password, user.getPassword())) {

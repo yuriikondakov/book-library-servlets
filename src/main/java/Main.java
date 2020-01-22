@@ -16,13 +16,6 @@ import service.validator.UserInputValidator;
 
 public class Main {
     public static void main(String[] args) {
-        User user = User.builder()
-                .withName("sdfsdf")
-                .withEmail("sdf@g.com")
-                .withPassword("12345")
-                .withPhoneNumber("+38067329")
-                .withRole(Role.ADMIN).build();
-
         UserDao userDao = new UserDaoImpl();
         AuthorDao authorDao = new AuthorDaoImpl();
         BookDao bookDao = new BookDaoImpl(authorDao);
